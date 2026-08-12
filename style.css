@@ -1,259 +1,220 @@
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#f3f5f7;
-
-    color:#222;
-
-    padding:40px;
-
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+    padding: 40px;
 }
+
 
 /* ========================= */
 /* CABEÇALHO */
 /* ========================= */
 
-header{
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
-    display:flex;
+    margin-bottom: 45px;
+    padding-bottom: 20px;
 
-    justify-content:center;
-
-    align-items:center;
-
-    gap:20px;
-
-    margin-bottom:45px;
-
-    padding-bottom:20px;
-
-    border-bottom:3px solid #A61E22;
-
+    border-bottom: 3px solid #A61E22;
 }
 
-.logo img{
-
-    width:150px;
-
+.logo img {
+    width: 150px;
+    height: auto;
 }
 
-header h1{
-
-    font-size:36px;
-
-    color:#A61E22;
-
+header h1 {
+    font-size: 36px;
+    color: #A61E22;
 }
 
-header h3{
-
-    margin-top:6px;
-
-    color:#555;
-
-    font-weight:normal;
-
+header h3 {
+    margin-top: 6px;
+    color: #555;
+    font-weight: normal;
 }
 
-header p{
-
-    margin-top:10px;
-
-    color:#666;
-
-    font-size:15px;
-
+header p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 15px;
 }
 
-.titulo{
-
-    text-align:left;
-
+.titulo {
+    text-align: left;
 }
 
-.titulo h1{
-
-    margin-bottom:5px;
-
+.titulo h1 {
+    margin-bottom: 5px;
 }
 
-.titulo h3{
-
-    margin-bottom:8px;
-
+.titulo h3 {
+    margin-bottom: 8px;
 }
+
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
 
 /* ========================= */
 /* DESTINOS */
 /* ========================= */
 
-.container{
-    max-width: 1800px;
-    margin: 0 auto;
+.grupo {
+    width: 100%;
+    margin-top: 20px;
 }
 
-.grupo{
-
-    margin-top:20px;
-
+.grupo:first-of-type {
+    margin-top: 0;
 }
 
-.grupo:first-of-type{
+.grupo h2 {
+    color: #A61E22;
+    font-size: 28px;
 
-    margin-top:0;
+    margin-bottom: 18px;
+    padding-left: 12px;
 
+    border-left: 6px solid #A61E22;
 }
 
-.grupo h2{
-
-    color:#A61E22;
-
-    font-size:28px;
-
-    margin-bottom:18px;
-
-    padding-left:12px;
-
-    border-left:6px solid #A61E22;
-
-}
 
 /* ========================= */
 /* TABELAS */
 /* ========================= */
 
-table{
+table {
+    width: 100%;
 
-    width:100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 
-    border-collapse:collapse;
+    background: white;
 
-    table-layout:fixed;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
 
-    background:white;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
     border-radius: 8px;
     overflow: hidden;
-
 }
 
-thead{
 
-    display:table-header-group;
-
-    background:#A61E22;
-
-    color:white;
-
-}
-
-th{
-
-    padding:11px 10px;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-}
-
-td{
-
-    padding:11px 10px;
-
-    font-size:14px;
-
-    border-bottom:1px solid #ddd;
-
-    text-align:center;
-
-}
-
-tbody tr:nth-child(even){
-
-    background:#f8f8f8;
-
-}
-
-tbody tr:hover{
-
-    background:#edf5ff;
-
-}
-
-td:nth-child(4){
-
-    text-align:left;
-
-}
 /* ========================= */
 /* LARGURA DAS COLUNAS */
 /* ========================= */
 
-th:nth-child(1),
-td:nth-child(1){
-
-    width:80px;
-
+.col-class {
+    width: 80px;
 }
 
-th:nth-child(2),
-td:nth-child(2){
-
-    width:120px;
-
+.col-post {
+    width: 120px;
 }
 
-th:nth-child(3),
-td:nth-child(3){
-
-    width:120px;
-
+.col-re {
+    width: 120px;
 }
 
-th:nth-child(5),
-td:nth-child(5){
-
-    width:170px;
-
+.col-nome {
+    width: auto;
 }
 
-th:nth-child(6),
-td:nth-child(6){
-
-    width:150px;
-
+.col-eb {
+    width: 170px;
 }
 
-/* A coluna Nome ocupa o restante automaticamente */
+.col-data {
+    width: 150px;
+}
+
+
+/* ========================= */
+/* CABEÇALHO DA TABELA */
+/* ========================= */
+
+thead {
+    display: table-header-group;
+
+    background: #A61E22;
+    color: white;
+}
+
+th {
+    padding: 11px 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ========================= */
+/* CÉLULAS */
+/* ========================= */
+
+td {
+    padding: 11px 10px;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+td:nth-child(4) {
+    text-align: left;
+}
+
+
+/* ========================= */
+/* LINHAS */
+/* ========================= */
+
+tbody tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+tbody tr:hover {
+    background: #edf5ff;
+}
 
 
 /* ========================= */
 /* TOTAL DE INSCRITOS */
 /* ========================= */
 
-.total-inscritos{
+.total-inscritos {
+    margin-top: 10px;
 
-    margin-top:10px;
+    text-align: right;
 
-    text-align:right;
+    color: #666;
 
-    color:#666;
-
-    font-size:14px;
-
-    font-style:italic;
-
+    font-size: 14px;
+    font-style: italic;
 }
 
 
@@ -261,56 +222,47 @@ td:nth-child(6){
 /* LINK DE INSCRIÇÃO */
 /* ========================= */
 
-.inscricao{
+.inscricao {
+    width: 100%;
 
-    margin-top:60px;
+    margin-top: 60px;
+    padding: 22px;
 
-    padding:22px;
+    background: #ffffff;
 
-    background:#ffffff;
+    border-left: 5px solid #A61E22;
 
-    border-left:5px solid #A61E22;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
-
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
 }
 
-.inscricao h3{
+.inscricao h3 {
+    color: #A61E22;
 
-    color:#A61E22;
+    margin-bottom: 10px;
 
-    margin-bottom:10px;
-
-    font-size:19px;
-
+    font-size: 19px;
 }
 
-.inscricao p{
+.inscricao p {
+    color: #555;
 
-    color:#555;
+    margin-bottom: 12px;
 
-    margin-bottom:12px;
-
-    line-height:1.5;
-
+    line-height: 1.5;
 }
 
-.inscricao a{
+.inscricao a {
+    color: #0056b3;
 
-    color:#0056b3;
+    font-weight: bold;
 
-    font-weight:bold;
+    text-decoration: none;
 
-    text-decoration:none;
-
-    word-break:break-all;
-
+    word-break: break-all;
 }
 
-.inscricao a:hover{
-
-    text-decoration:underline;
-
+.inscricao a:hover {
+    text-decoration: underline;
 }
 
 
@@ -318,16 +270,14 @@ td:nth-child(6){
 /* RODAPÉ */
 /* ========================= */
 
-footer{
+footer {
+    margin-top: 35px;
 
-    margin-top:35px;
+    text-align: right;
 
-    text-align:right;
+    color: #777;
 
-    color:#777;
-
-    font-size:12px;
-
+    font-size: 12px;
 }
 
 
@@ -335,32 +285,23 @@ footer{
 /* IMPRESSÃO */
 /* ========================= */
 
-@media print{
+@media print {
 
-    body{
-
-        background:white;
-
-        padding:0;
-
+    body {
+        background: white;
+        padding: 0;
     }
 
-    .grupo{
-
-        page-break-inside:avoid;
-
+    .grupo {
+        page-break-inside: avoid;
     }
 
-    table{
-
-        box-shadow:none;
-
+    table {
+        box-shadow: none;
     }
 
-    .inscricao{
-
-        box-shadow:none;
-
+    .inscricao {
+        box-shadow: none;
     }
 
 }
