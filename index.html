@@ -2,36 +2,54 @@
 <html lang="pt-BR">
 
 <head>
-
+    
     <meta charset="UTF-8">
 
+    <!-- Faz o site se adaptar corretamente a dispositivos diversos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>RPT Interno 18º GB</title>
 
+    <!-- Define o ícone exibido na aba do navegador -->
     <link rel="icon" type="image/png" href="escudo.png">
 
+    <!-- Importa o arquivo CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
+
+<!-- ========================================================= CABEÇALHO DO SITE ========================================================= -->
 
 <header>
 
     <div class="logo">
+        
         <img src="logo.png" alt="Brasão 18º GB">
+        
     </div>
 
+
+    
     <div class="titulo">
 
         <h1>RPT INTERNO</h1>
 
         <h3>18º Grupamento de Bombeiros</h3>
 
+        <!--
+            Exibe a data da última atualização.
+
+            O texto "Carregando..." é exibido inicialmente.
+            O JavaScript substitui esse conteúdo pela data
+            quando os dados são carregados.
+        -->
         <p>
             Última atualização:
-            <strong>28/08/2026</strong>
+            <strong id="data-atualizacao">Carregando...</strong>
         </p>
 
     </div>
@@ -39,444 +57,39 @@
 </header>
 
 
+<!-- ========================================================= TABELAS COM AS INSCRIÇÕES DO FORMS ========================================================= -->
+
 <div class="container">
 
+    <div id="resultado">
 
-    <!-- ========================================= -->
-    <!-- SANTANA DE PARNAÍBA -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: Santana de Parnaíba</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Cb PM</td>
-                    <td>122730-A</td>
-                    <td>Alexandre Machado Lima</td>
-                    <td>Osasco</td>
-                    <td>09/01/2026</td>
-                </tr>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Cb PM</td>
-                    <td>126509-1</td>
-                    <td>Edson Francisco de Brito Oliveira</td>
-                    <td>Osasco</td>
-                    <td>09/01/2026</td>
-                </tr>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Sd PM</td>
-                    <td>221031-2</td>
-                    <td>Richard Vicente Evangelista</td>
-                    <td>Osasco</td>
-                    <td>11/01/2026</td>
-                </tr>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Sd PM</td>
-                    <td>155898-6</td>
-                    <td>Ítalo César Vaz de Almeida Pereira</td>
-                    <td>Osasco</td>
-                    <td>12/01/2026</td>
-                </tr>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Sd PM</td>
-                    <td>153285-5</td>
-                    <td>Jonas Marcos Cabral</td>
-                    <td>Osasco</td>
-                    <td>26/08/2026</td>
-                </tr>
-
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
+        <p class="carregando">
+            Carregando inscrições...
+        </p>
 
     </div>
-
-
-    <!-- ========================================= -->
-    <!-- BARUERI -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: Barueri</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Cb PM</td>
-                    <td>114977-6</td>
-                    <td>Manoel de Sousa Maciel</td>
-                    <td>Itapecerica da Serra</td>
-                    <td>06/08/2026</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-
-
-    <!-- ========================================= -->
-    <!-- EMBU DAS ARTES - DESATIVADO -->
-    <!-- ========================================= -->
-
-    <!--
-    <div class="grupo">
-
-        <h2>Destino: Embu das Artes</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-    -->
-
-    <!-- ========================================= -->
-    <!-- EM -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: EM</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Cb PM</td>
-                    <td>128327-8</td>
-                    <td>Max de Araujo Santos</td>
-                    <td>Barueri</td>
-                    <td>25/08/2026</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-
-
-    <!-- ========================================= -->
-    <!-- OSASCO -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: Osasco</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Sd PM</td>
-                    <td>240932-1</td>
-                    <td>Fernando Vieira de Souza</td>
-                    <td>Carapicuíba</td>
-                    <td>23/07/2026</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-
-
-    <!-- ========================================= -->
-    <!-- ITAPEVI -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: Itapevi</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>3º Sgt PM</td>
-                    <td>124356-0</td>
-                    <td>Arnaldo de Paula Silva</td>
-                    <td>Embu-Guaçu</td>
-                    <td>12/08/2026</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-
-
-    <!-- ========================================= -->
-    <!-- COTIA -->
-    <!-- ========================================= -->
-
-    <div class="grupo">
-
-        <h2>Destino: Cotia</h2>
-
-        <table>
-
-            <colgroup>
-                <col class="col-class">
-                <col class="col-post">
-                <col class="col-re">
-                <col class="col-nome">
-                <col class="col-eb">
-                <col class="col-data">
-            </colgroup>
-
-            <thead>
-
-                <tr>
-                    <th>Class.</th>
-                    <th>Post/Grad</th>
-                    <th>RE</th>
-                    <th>Nome</th>
-                    <th>EB Atual</th>
-                    <th>Data de Inscrição</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td class="classificacao"></td>
-                    <td>Sd PM</td>
-                    <td>251695-A</td>
-                    <td>Patrick Alves Oliveira Flores</td>
-                    <td>Embu-Guaçu</td>
-                    <td>13/05/2026</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-        <div class="total-inscritos">
-            Total de inscritos:
-            <strong class="contador"></strong>
-        </div>
-
-    </div>
-
 
 </div>
 
-
-<!-- ========================================= -->
-<!-- INSCRIÇÃO -->
-<!-- ========================================= -->
 
 <section class="inscricao">
 
     <h3>Link para inscrição no RPT Interno</h3>
 
+    <!-- Orientações para os militares -->
     <p>
         As inscrições deverão ser realizadas exclusivamente pelo formulário eletrônico abaixo:
     </p>
 
+    <!-- Link para o Forms -->
     <a href="https://forms.gle/ntkniJ4qrsCYSG6A9" target="_blank">
-        https://forms.gle/ntkniJ4qrsCYSG6A9
+        Formulário de inscrição
     </a>
 
 </section>
 
+
+<!-- ========================================================= RODAPÉ ========================================================= -->
 
 <footer>
 
@@ -485,70 +98,10 @@
 </footer>
 
 
-<!-- ========================================= -->
-<!-- CONTADOR AUTOMÁTICO -->
-<!-- ========================================= -->
+<!-- ========================================================= JAVASCRIPT ========================================================= -->
 
-<script>
+<script src="script.js"></script>
 
-document.querySelectorAll(".grupo").forEach(grupo => {
-
-    const tbody = grupo.querySelector("tbody");
-
-    if (!tbody) return;
-
-    const linhas = Array.from(tbody.querySelectorAll("tr"));
-
-    // Ordena por data de inscrição
-    linhas.sort((a, b) => {
-
-        const dataA = a.cells[5].textContent.trim().split("/");
-        const dataB = b.cells[5].textContent.trim().split("/");
-
-        const dA = new Date(
-            dataA[2],
-            dataA[1] - 1,
-            dataA[0]
-        );
-
-        const dB = new Date(
-            dataB[2],
-            dataB[1] - 1,
-            dataB[0]
-        );
-
-        return dA - dB;
-
-    });
-
-    // Limpa a tabela
-    tbody.innerHTML = "";
-
-    // Reinsere ordenado e classificado
-    linhas.forEach((linha, indice) => {
-
-        const classificacao =
-            linha.querySelector(".classificacao");
-
-        if (classificacao) {
-            classificacao.textContent = `${indice + 1}º`;
-        }
-
-        tbody.appendChild(linha);
-
-    });
-
-    // Atualiza o total
-    const contador =
-        grupo.querySelector(".contador");
-
-    if (contador) {
-        contador.textContent = linhas.length;
-    }
-
-});
-
-</script>
 
 </body>
 
