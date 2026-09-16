@@ -1,257 +1,528 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ============================================================
+   VARIÁVEIS GLOBAIS
+   Centraliza as principais cores utilizadas no site.
+
+   Dessa forma, uma futura alteração de identidade visual
+   pode ser feita em um único local.
+   ============================================================ */
+
+:root {
+
+    /* Cor institucional principal do RPT */
+    --vermelho-rpt: #A61E22;
+
+    /* Fundo geral da página */
+    --fundo-pagina: #eef0f3;
+
+    /* Branco utilizado nos elementos claros */
+    --branco: #ffffff;
+
+    /* Cor principal dos textos */
+    --texto-principal: #222;
+
+    /* Cor secundária dos textos */
+    --texto-secundario: #555;
+
+    /* Cor suave dos textos */
+    --texto-suave: #666;
+
+    /* Cor das bordas das tabelas */
+    --borda-tabela: #ddd;
+
 }
+
+
+/* ============================================================
+   RESET GLOBAL
+
+   Remove margens e espaçamentos padrão do navegador.
+
+   box-sizing: border-box faz com que padding e borda
+   sejam considerados dentro da largura/altura definida.
+   ============================================================ */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ============================================================
+   CONFIGURAÇÃO GERAL DA PÁGINA
+
+   Define fonte, cor padrão, fundo e espaçamento externo.
+   ============================================================ */
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f5f7;
-    color: #222;
-    padding: 40px;
+
+    background: var(--fundo-pagina);
+
+    color: var(--texto-principal);
+
+    padding: 30px;
+
 }
 
 
-/* ========================= */
-/* CABEÇALHO */
-/* ========================= */
+/* ============================================================
+   CABEÇALHO
+
+   Organiza o brasão e as informações do RPT lado a lado.
+   ============================================================ */
 
 header {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 20px;
 
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+
     padding-bottom: 20px;
 
-    border-bottom: 3px solid #A61E22;
+    border-bottom: 3px solid var(--vermelho-rpt);
+
 }
+
+
+/* ============================================================
+   BRASÃO
+
+   Define o tamanho da imagem exibida no cabeçalho.
+   ============================================================ */
 
 .logo img {
-    width: 150px;
+
+    width: 135px;
+
     height: auto;
+
 }
 
-header h1 {
-    font-size: 36px;
-    color: #A61E22;
-}
 
-header h3 {
-    margin-top: 6px;
-    color: #555;
-    font-weight: normal;
-}
+/* ============================================================
+   ÁREA DE TÍTULO
 
-header p {
-    margin-top: 10px;
-    color: #666;
-    font-size: 15px;
-}
+   Mantém os textos do cabeçalho alinhados à esquerda.
+   ============================================================ */
 
 .titulo {
+
     text-align: left;
+
 }
 
-.titulo h1 {
+
+/* Título principal do sistema */
+
+header h1 {
+
+    font-size: 36px;
+
+    color: var(--vermelho-rpt);
+
     margin-bottom: 5px;
+
 }
 
-.titulo h3 {
+
+/* Nome do Grupamento */
+
+header h3 {
+
     margin-bottom: 8px;
+
+    color: var(--texto-secundario);
+
+    font-weight: normal;
+
+    font-size: 18px;
+
 }
 
 
-/* ========================= */
-/* CONTAINER */
-/* ========================= */
+/* Texto "Última atualização:" */
+
+header p {
+
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+}
+
+
+/* Valor da data da última atualização */
+
+header strong {
+
+    color: var(--texto-principal);
+
+}
+
+
+/* ============================================================
+   CONTAINER PRINCIPAL
+
+   Define a largura máxima do conteúdo e centraliza
+   o RPT horizontalmente na página.
+   ============================================================ */
 
 .container {
-    width: 100%;
-    max-width: 1800px;
+
+    max-width: 1250px;
+
     margin: 0 auto;
+
 }
 
 
-/* ========================= */
-/* DESTINOS */
-/* ========================= */
+/* ============================================================
+   GRUPOS / DESTINOS
+
+   Cada município de destino possui seu próprio grupo,
+   contendo título e tabelas de graduação.
+   ============================================================ */
 
 .grupo {
+
+    margin-top: 40px;
+
     width: 100%;
-    margin-top: 20px;
+
 }
 
-.grupo:first-of-type {
+
+/* Remove o espaço superior do primeiro destino */
+
+.grupo:first-child {
+
     margin-top: 0;
+
 }
+
+
+/* ============================================================
+   TÍTULO DO DESTINO
+
+   A borda vermelha serve como destaque visual.
+   ============================================================ */
 
 .grupo h2 {
-    color: #A61E22;
-    font-size: 28px;
 
-    margin-bottom: 18px;
-    padding-left: 12px;
+    color: var(--vermelho-rpt);
 
-    border-left: 6px solid #A61E22;
+    font-size: 27px;
+
+    margin-bottom: 12px;
+
+    padding-left: 11px;
+
+    border-left: 6px solid var(--vermelho-rpt);
+
 }
 
 
-/* ========================= */
-/* TABELAS */
-/* ========================= */
+/* ============================================================
+   TABELAS
+
+   Define a aparência geral de todas as tabelas
+   criadas dinamicamente pelo JavaScript.
+   ============================================================ */
 
 table {
+
     width: 100%;
 
     border-collapse: collapse;
+
     table-layout: fixed;
 
-    background: white;
+    background: var(--branco);
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
 
     border-radius: 8px;
+
     overflow: hidden;
+
 }
 
 
-/* ========================= */
-/* LARGURA DAS COLUNAS */
-/* ========================= */
+/* ============================================================
+   CABEÇALHO DAS TABELAS
 
-.col-class {
-    width: 80px;
-}
-
-.col-post {
-    width: 120px;
-}
-
-.col-re {
-    width: 120px;
-}
-
-.col-nome {
-    width: auto;
-}
-
-.col-eb {
-    width: 170px;
-}
-
-.col-data {
-    width: 150px;
-}
-
-
-/* ========================= */
-/* CABEÇALHO DA TABELA */
-/* ========================= */
+   Utiliza a cor institucional do RPT.
+   ============================================================ */
 
 thead {
-    display: table-header-group;
 
-    background: #A61E22;
-    color: white;
+    background: var(--vermelho-rpt);
+
+    color: var(--branco);
+
 }
 
+
+/* ============================================================
+   CÉLULAS DO CABEÇALHO
+
+   Define tamanho, espaçamento e alinhamento dos títulos
+   das colunas.
+   ============================================================ */
+
 th {
+
     padding: 11px 10px;
 
     font-size: 15px;
+
     font-weight: bold;
 
     text-align: center;
+
+    white-space: nowrap;
+
 }
 
 
-/* ========================= */
-/* CÉLULAS */
-/* ========================= */
+/* ============================================================
+   CÉLULAS DAS LINHAS
+
+   Define espaçamento, tamanho da fonte e alinhamento
+   das informações dos inscritos.
+   ============================================================ */
 
 td {
+
     padding: 11px 10px;
 
-    font-size: 14px;
+    font-size: 15px;
 
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--borda-tabela);
 
     text-align: center;
 
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
+    white-space: nowrap;
 
-td:nth-child(4) {
-    text-align: left;
 }
 
 
-/* ========================= */
-/* LINHAS */
-/* ========================= */
+/* ============================================================
+   ALTURA DAS LINHAS
+
+   Mantém uma altura uniforme para cada inscrição.
+   ============================================================ */
+
+tbody tr {
+
+    height: 42px;
+
+}
+
+
+/* ============================================================
+   LINHAS ALTERNADAS
+
+   Cria um contraste suave entre as linhas da tabela,
+   facilitando a leitura.
+   ============================================================ */
 
 tbody tr:nth-child(even) {
+
     background: #f8f8f8;
+
 }
+
+
+/* ============================================================
+   EFEITO AO PASSAR O MOUSE
+
+   Destaca temporariamente a linha que está sendo visualizada.
+   ============================================================ */
 
 tbody tr:hover {
+
     background: #edf5ff;
+
 }
 
 
-/* ========================= */
-/* TOTAL DE INSCRITOS */
-/* ========================= */
+/* ============================================================
+   LARGURA DAS COLUNAS
+
+   Distribui os 100% da tabela entre as seis colunas.
+   ============================================================ */
+
+
+/* Classificação */
+
+th:nth-child(1),
+td:nth-child(1) {
+
+    width: 9%;
+
+}
+
+
+/* Posto / Graduação */
+
+th:nth-child(2),
+td:nth-child(2) {
+
+    width: 18%;
+
+}
+
+
+/* RE */
+
+th:nth-child(3),
+td:nth-child(3) {
+
+    width: 17%;
+
+}
+
+
+/* QRA */
+
+th:nth-child(4),
+td:nth-child(4) {
+
+    width: 17%;
+
+}
+
+
+/* EB Atual */
+
+th:nth-child(5),
+td:nth-child(5) {
+
+    width: 19%;
+
+}
+
+
+/* Data de Inscrição */
+
+th:nth-child(6),
+td:nth-child(6) {
+
+    width: 20%;
+
+}
+
+
+/* ============================================================
+   TOTAL DE INSCRITOS
+
+   Exibe a quantidade de militares presentes
+   naquele grupo de graduação.
+   ============================================================ */
 
 .total-inscritos {
-    margin-top: 10px;
+
+    width: 100%;
+
+    margin-top: 8px;
 
     text-align: right;
 
-    color: #666;
+    color: var(--texto-suave);
 
-    font-size: 14px;
+    font-size: 13px;
+
     font-style: italic;
+
 }
 
 
-/* ========================= */
-/* LINK DE INSCRIÇÃO */
-/* ========================= */
+/* ============================================================
+   MENSAGEM DE CARREGAMENTO
+
+   Exibida enquanto o JavaScript busca os dados da API.
+   A animação dos pontos é controlada pelo JavaScript.
+   ============================================================ */
+
+.carregando {
+
+    text-align: center;
+
+    color: var(--texto-suave);
+
+    padding: 30px;
+
+    font-size: 16px;
+
+}
+
+
+/* ============================================================
+   CARD DE INSCRIÇÃO
+
+   Área inferior que apresenta o formulário de inscrição.
+   ============================================================ */
 
 .inscricao {
-    width: 100%;
 
-    margin-top: 60px;
-    padding: 22px;
+    max-width: 1250px;
 
-    background: #ffffff;
+    margin: 50px auto 0;
 
-    border-left: 5px solid #A61E22;
+    padding: 20px;
+
+    background: var(--branco);
+
+    border-left: 5px solid var(--vermelho-rpt);
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+
 }
 
+
+/* Título do card de inscrição */
+
 .inscricao h3 {
-    color: #A61E22;
+
+    color: var(--vermelho-rpt);
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+}
+
+
+/* Texto explicativo do card */
+
+.inscricao p {
+
+    color: var(--texto-secundario);
 
     margin-bottom: 10px;
 
-    font-size: 19px;
+    line-height: 1.4;
+
 }
 
-.inscricao p {
-    color: #555;
 
-    margin-bottom: 12px;
-
-    line-height: 1.5;
-}
+/* Link do formulário */
 
 .inscricao a {
+
     color: #0056b3;
 
     font-weight: bold;
@@ -259,49 +530,132 @@ tbody tr:hover {
     text-decoration: none;
 
     word-break: break-all;
+
 }
+
+
+/* Efeito ao passar o mouse sobre o link */
 
 .inscricao a:hover {
+
     text-decoration: underline;
+
 }
 
 
-/* ========================= */
-/* RODAPÉ */
-/* ========================= */
+/* ============================================================
+   TÍTULOS DOS GRUPOS DE GRADUAÇÃO
+
+   Exemplo:
+
+   Subtenentes e Sargentos
+   Cabos e Soldados
+   ============================================================ */
+
+.subgrupo-titulo {
+
+    margin-top: 28px;
+
+    margin-bottom: 10px;
+
+    color: #000;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+}
+
+
+/* ============================================================
+   ESPAÇAMENTO ENTRE O DESTINO E O PRIMEIRO SUBGRUPO
+
+   Aumenta propositalmente a distância entre:
+
+   "Destino: Município"
+
+   e
+
+   "Subtenentes e Sargentos"
+
+   ou
+
+   "Cabos e Soldados"
+   ============================================================ */
+
+.grupo h2 + .subgrupo-titulo {
+
+    margin-top: 35px;
+
+}
+
+
+/* ============================================================
+   RODAPÉ
+
+   Exibe a informação complementar no final da página.
+   ============================================================ */
 
 footer {
-    margin-top: 35px;
+
+    margin-top: 30px;
 
     text-align: right;
 
     color: #777;
 
     font-size: 12px;
+
 }
 
 
-/* ========================= */
-/* IMPRESSÃO */
-/* ========================= */
+/* ============================================================
+   IMPRESSÃO
+
+   Ajustes aplicados quando o usuário imprime a página.
+
+   Remove o fundo cinza e os espaçamentos desnecessários
+   para deixar o documento mais adequado à impressão.
+   ============================================================ */
 
 @media print {
 
+
+    /* Fundo branco para impressão */
+
     body {
-        background: white;
+
+        background: var(--branco);
+
         padding: 0;
+
     }
+
+
+    /* Evita dividir um destino entre páginas */
 
     .grupo {
+
         page-break-inside: avoid;
+
     }
+
+
+    /* Remove sombra das tabelas na impressão */
 
     table {
+
         box-shadow: none;
+
     }
 
+
+    /* Remove sombra do card de inscrição */
+
     .inscricao {
+
         box-shadow: none;
+
     }
 
 }
