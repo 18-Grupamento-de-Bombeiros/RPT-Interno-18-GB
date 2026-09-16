@@ -2,106 +2,68 @@
 <html lang="pt-BR">
 
 <head>
-    
+
     <meta charset="UTF-8">
 
-    <!-- Faz o site se adaptar corretamente a dispositivos diversos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>RPT Interno 18º GB</title>
 
-    <!-- Define o ícone exibido na aba do navegador -->
-    <link rel="icon" type="image/png" href="escudo.png">
+    <style>
 
-    <!-- Importa o arquivo CSS -->
-    <link rel="stylesheet" href="style.css">
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef0f3;
+            color: #222;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .aviso {
+            background: white;
+            padding: 40px;
+            border-left: 6px solid #A61E22;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #A61E22;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+    </style>
 
 </head>
 
-
 <body>
 
-
-<!-- ========================================================= CABEÇALHO DO SITE ========================================================= -->
-
-<header>
-
-    <div class="logo">
-        
-        <img src="logo.png" alt="Brasão 18º GB">
-        
-    </div>
-
-
-    
-    <div class="titulo">
+    <div class="aviso">
 
         <h1>RPT INTERNO</h1>
 
-        <h3>18º Grupamento de Bombeiros</h3>
-
-        <!--
-            Exibe a data da última atualização.
-
-            O texto "Carregando..." é exibido inicialmente.
-            O JavaScript substitui esse conteúdo pela data
-            quando os dados são carregados.
-        -->
         <p>
-            Última atualização:
-            <strong id="data-atualizacao">Carregando...</strong>
+            O sistema está temporariamente fora do ar para atualização.
+        </p>
+
+        <p>
+            O acesso será restabelecido em breve.
         </p>
 
     </div>
-
-</header>
-
-
-<!-- ========================================================= TABELAS COM AS INSCRIÇÕES DO FORMS ========================================================= -->
-
-<div class="container">
-
-    <div id="resultado">
-
-        <p class="carregando">
-            Carregando inscrições...
-        </p>
-
-    </div>
-
-</div>
-
-
-<section class="inscricao">
-
-    <h3>Link para inscrição no RPT Interno</h3>
-
-    <!-- Orientações para os militares -->
-    <p>
-        As inscrições deverão ser realizadas exclusivamente pelo formulário eletrônico abaixo:
-    </p>
-
-    <!-- Link para o Forms -->
-    <a href="https://forms.gle/ntkniJ4qrsCYSG6A9" target="_blank">
-        Formulário de inscrição
-    </a>
-
-</section>
-
-
-<!-- ========================================================= RODAPÉ ========================================================= -->
-
-<footer>
-
-    Documento meramente informativo.
-
-</footer>
-
-
-<!-- ========================================================= JAVASCRIPT ========================================================= -->
-
-<script src="script.js"></script>
-
 
 </body>
 
