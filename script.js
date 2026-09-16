@@ -5,7 +5,7 @@
 // URL do Google Apps Script.
 
 const API_URL =
-    "https://script.google.com/a/macros/policiamilitar.sp.gov.br/s/AKfycbzKFFIK-fQYKP4ue-EW2xG2AEDAphldp4yBfQBpGJfXGOgBYMvh-ifJtYpRHvjoEh6C/exec";
+    "https://script.google.com/macros/s/AKfycbzKFFIK-fQYKP4ue-EW2xG2AEDAphldp4yBfQBpGJfXGOgBYMvh-ifJtYpRHvjoEh6C/exec";
 
 
 // ============================================================
